@@ -1,5 +1,5 @@
 const personlist = document.querySelector('#Person-list');
-
+const form = document.querySelector("#add person");
 // create element & render People
 function renderPerson(doc){
     let li = document.createElement('li');
@@ -22,3 +22,15 @@ db.collection('Person').get().then(snapshot => {
         renderPerson(doc);
     });
 })
+//saving data
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('Person').add({
+        Name: form.Name.value,
+        Age: form.Age.value
+    });
+    form.Name.value = '';
+    form.Age.value = '';
+});
+ 
