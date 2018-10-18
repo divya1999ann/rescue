@@ -1,5 +1,5 @@
 const personlist = document.querySelector('#Person-list');
-const form = document.querySelector("#add person");
+const form = document.querySelector("#addperson");
 // create element & render People
 function renderPerson(doc){
     let li = document.createElement('li');
