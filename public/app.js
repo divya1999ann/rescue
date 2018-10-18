@@ -28,10 +28,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     db.collection('Person').add({
         Name: form.Name.value,
-        Age: form.Age.value
+        
     });
     form.Name.value = '';
-    form.Age.value = '';
+    
 });
  
 
